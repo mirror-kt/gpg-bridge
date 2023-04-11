@@ -1,18 +1,32 @@
 [package]
 name = "gpg-bridge"
 version = "0.1.0"
-authors = ["Jay Lee <busyjaylee@gmail.com>"]
-edition = "2018"
-description = "A bridge connects openssh-portable and GnuPG on Windows."
+edition = "2021"
+description = "A bridge connects openssh-portable and GnuPG on Windows"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-log = "0.4"
-tokio = { version = "1.8", features = ["net", "sync", "parking_lot", "rt", "io-util", "macros", "process", "fs"] }
-pretty_env_logger = "0.4"
-parking_lot = "0.11"
-clap = "2.0"
-futures = "0.3"
-windows = "0.17"
-
-[build-dependencies]
-windows = "0.17"
+clap = { version = "4.2.1", features = ["derive", "cargo"] }
+futures = "0.3.28"
+log = "0.4.17"
+parking_lot = "0.12.1"
+pretty_env_logger = "0.4.0"
+tokio = { version = "1.27.0", features = [
+    "net",
+    "sync",
+    "parking_lot",
+    "rt",
+    "rt-multi-thread",
+    "io-util",
+    "macros",
+    "process",
+    "fs",
+] }
+windows = { version = "0.48.0", features = [
+    "Win32_Foundation",
+    "Win32_System_Memory",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_DataExchange",
+    "Win32_Security",
+] }
