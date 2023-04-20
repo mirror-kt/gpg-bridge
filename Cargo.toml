@@ -3,6 +3,7 @@ name = "gpg-bridge"
 version = "0.1.0"
 edition = "2021"
 description = "A bridge connects openssh-portable and GnuPG on Windows"
+authors = ["Jay Lee <busyjaylee@gmail.com>", "Misato Kano <me@mirror-kt.dev>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
